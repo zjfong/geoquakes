@@ -17,7 +17,11 @@ function fetchQuakeData(){
     method: 'GET',
     url: weekly_quakes_endpoint,
     success: function(response){
-      response.features.forEach(function(quake){
+
+      quakeArray = response.features;
+
+      quakeArray.forEach(function(quake){
+
         //ADD INFO ROW
         var title = quake.properties.title;
         var hours_ago = Math.round( ( Date.now() - quake.properties.time ) / (1000*60*60) );
@@ -31,6 +35,7 @@ function fetchQuakeData(){
           map: map,
           title: title
         });
+
       });
     }
   });
