@@ -13,23 +13,27 @@ $(document).ready(function(){
 });
 
 function fetchQuakeData(){
-  $.get(weekly_quakes_endpoint, function(response){
-    response.features.forEach(function renderRowAndMarker(quake){
-      // ADD INFO ROW
-      var title = quake.properties.title;
-      var hours_ago = Math.round( ( Date.now() - quake.properties.time ) / (1000*60*60) );
-      $info_row_target.append( "<p>" + title + " / " + hours_ago + " hours ago</p>");
+  $.ajax({
+    method: 'GET',
+    url: weekly_quakes_endpoint,
+    success: function(response){
+      response.features.forEach(function(quake){
+        //ADD INFO ROW
+        var title = quake.properties.title;
+        var hours_ago = Math.round( ( Date.now() - quake.properties.time ) / (1000*60*60) );
+        $info_row_target.append( "<p>" + title + " / " + hours_ago + " hours ago</p>");
 
-      // CREATE MARKER
-      var lat = quake.geometry.coordinates[1];
-      var lng = quake.geometry.coordinates[0];
-      new google.maps.Marker({
-        position: new google.maps.LatLng(lat,lng),
-        map: map,
-        title: title
+        // CREATE MARKER
+        var lat = quake.geometry.coordinates[1];
+        var lng = quake.geometry.coordinates[0];
+        new google.maps.Marker({
+          position: new google.maps.LatLng(lat,lng),
+          map: map,
+          title: title
+        });
       });
-    });
-  })
+    }
+  });
 }
 
 function createMap(){
@@ -38,5 +42,3 @@ function createMap(){
     zoom: 1
   });
 }
-
-
