@@ -26,22 +26,30 @@
 		<title>Quake Watch</title>
 	</head>
 	<body>
-    <div id="map" class="column"></div>
-    <div id="info" class="column">
-      <h1>Earthquakes from the past week:</h1>
-      <!-- <p>M 4.2 - 1km ESE of Fontana, California / 123 hours ago </p> -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div id="map"></div>
+				</div>
+				<div class="col-md-6">
+					<div id="info">
+						<h1>Earthquakes from the past week:</h1>
+						<!-- <p>M 4.2 - 1km ESE of Fontana, California / 123 hours ago </p> -->
 
-			<div id="quakes-list">
+						<div id="quakes-list">
 
-        <!-- handlebars template -->
-        <script id="quakes-template" type="text/x-handlebars-template">
-          {{#each quakes}}
-          <hr>
-          <p>{{properties.title}} <span class="small text-muted">({{hoursAgo properties.time}})</span></p>
-          {{/each}}
-        </script>
+							<!-- handlebars template -->
+							<script id="quakes-template" type="text/x-handlebars-template">
+								{{#each quakes}}
+								<hr>
+								<p>{{properties.title}} <span class="small text-muted">({{hoursAgo properties.time}})</span></p>
+								{{/each}}
+							</script>
 
-      </div>
+						</div>
+					</div>
+				</div>
+			</div>
     </div>
 	</body>
 </html>
