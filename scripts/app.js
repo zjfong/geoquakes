@@ -6,6 +6,5 @@ var template;
 
 $(document).on("ready", function() {
 
-  $quakesList = $('#quakes-list');
 
 });
