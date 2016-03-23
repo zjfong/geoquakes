@@ -2,7 +2,7 @@
 
 | Objectives |
 | :--- |
-| _Studens will be able to:_ |
+| _Students will be able to:_ |
 | Use AJAX to grab data from the USGS earthquakes API |
 | Create and compile a Handlebars template |
 | Use Handlebars templating to display data from an AJAX call on your HTML page |
