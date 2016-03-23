@@ -6,7 +6,7 @@ var template;
 
 $(document).on("ready", function() {
 
-  $quakesList = $('#quakes-list');
+  $quakesList = $('#info');
 
   // compile handlebars template
   var source = $('#quakes-template').html();
