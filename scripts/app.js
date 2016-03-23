@@ -12,12 +12,6 @@ $(document).on("ready", function() {
   var source = $('#quakes-template').html();
   template = Handlebars.compile(source);
 
-  // custom handlebars helper for formatting time in hours ago
-  Handlebars.registerHelper('hoursAgo', function(time) {
-    var hoursAgo = Math.round((Date.now() - time) / (1000*60*60));
-    return hoursAgo + ' hours ago';
-  });
-
   createMap();
   fetchQuakeData();
 
