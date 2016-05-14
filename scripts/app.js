@@ -14,8 +14,8 @@ $(document).on("ready", function() {
     })
     .done(function(response){
         console.log("success!");
-        var tempData = response.campuses;
-        createMarkers(tempData, gaImage);
+        var gaLocations = response.campuses;
+        createMarkers(gaLocations, gaImage);
     })
     .fail(function(response){
         console.log("Error: ", response);

@@ -1,5 +1,5 @@
 { "campuses": [{ "properties": { "title": "General Assembly, San Francisco, CA" },
-   "geometry": { "coordinates": [-122.45, 37.77] }},
+   "geometry": { "coordinates": [-122.419416, 37.774929] }},
 { "properties": { "title": "General Assembly, Austin, TX" },
   "geometry": { "coordinates": [ -99.901813, 31.968599 ]}
 },
@@ -10,7 +10,7 @@
     "geometry": { "coordinates": [-77.036871, 38.907192] } 
 },
 { "properties": { "title": "General Assembly, Boston, MA" },
-    "geometry": { "coordinates": [-122.45, 37.77] }
+    "geometry": { "coordinates": [-71.058880, 42.360082] }
 },
 { "properties": { "title": "General Assembly, New York, NY" },
     "geometry": { "coordinates": [-74.005941, 40.712784] }
