@@ -26,10 +26,11 @@ Our goal is to:
 - List information about each quake.
 - Display a Google Map with a pin at the epicenter of each quake.
 
-Here's a screenshot of what we expect you to make or do.
+Here's a screenshot of what the final product could look like:
 
-![Example Image]()
+![geoquakes](https://cloud.githubusercontent.com/assets/6520345/17942822/c6531b7c-69ed-11e6-9802-80bb3304a941.png)
 
+If your partner forked the repository originally, you should fork their repository **after you finish working together** so that you'll have your own copy of your work to edit in the future. Link your own repo to your personal website.
 
 
 ## Instructions
@@ -76,5 +77,5 @@ Once you've got the map to show up, your next goal is to drop a single pin on Sa
 #### Bonus:
 Extend your template:  
 - Calculate how long ago the quake occurred and add it to the page. E.g. "28 hours ago". Currently, the time that the API returns is in Unix time (seconds since 1/1/1970). That's a nice format for computers, but not a nice format for humans.
-- Parse the title to only include the location, E.g. Instead of "M 4.2 - 1km ESE of Fontana, California", it should just say "Fontana, California"
+- Parse the title to only include the location, E.g. Instead of "M 4.2 - 1km ESE of Fontana, California", it should just say "Fontana, California."
 - Create a visual indicator of the magnitude of a quake. For instance, maybe a 4.0 is indicated by a "yellow" dot, a 5.0 by an "orange" dot, and anything larger is "red".
