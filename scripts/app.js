@@ -32,37 +32,45 @@ $(document).on("ready", function() {
 
     var source = $('#template').html();
     var template = Handlebars.compile(source);
+
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
-        center: {lat: 37.78, lng: -122.44},
+        center: {lat: 37.78, lng: -122.44}
       });
 
     for(var i=0; i<json.features.length; i++){
         var earthquakeHtml = template({
 
-            magnitude: json.features[i].properties.mag,
-            location: json.features[i].properties.place,
+          magnitude: json.features[i].properties.mag,
+          location: json.features[i].properties.place,
 
-            //timeSince:
-       })
+          //timeSince:
+    })
 
-       $('#earthquake_template').append(earthquakeHtml);
+    $('#earthquake_template').append(earthquakeHtml);
 
-       var myLatLng = {lat: json.features[i].geometry.coordinates[0], lng: json.features[i].geometry.coordinates[1]};
-       console.log(myLatLng);
-
-
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: 'Hello World!'
-      });
+    var myLatLng = {
+      lat: json.features[i].geometry.coordinates[1],
+      lng: json.features[i].geometry.coordinates[0]
+    };
+    console.log(myLatLng);
 
 
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!' + i
+    });
 
-    }
+
+}
+  // var marker = new google.maps.Marker({
+  //     position: {lat: 37.78, lng: -122.44},
+  //     map: map,
+  //     title: 'Hello World!' + i
 
 
+  //   });
 
 
     // for(i=0; i<json.features.length; i++){
